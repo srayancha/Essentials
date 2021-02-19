@@ -42,6 +42,15 @@ namespace PepperDash.Essentials.Core.Room
     /// <summary>
     /// The config class for a room behaviour
     /// </summary>
+    public class RoomBehaviourGroupConfig : RoomComponentConfig
+    {
+        [JsonProperty("behaviourGroupComponentKeys")]
+        public List<string> BehaviourGroupComponentKeys { get; set; }
+    }
+
+    /// <summary>
+    /// The config class for a room behaviour
+    /// </summary>
     public class RoomBehaviourConfig : RoomComponentConfig
     {
 
@@ -74,10 +83,19 @@ namespace PepperDash.Essentials.Core.Room
     /// </summary>
     public class ComponentRoom : ReconfigurableDevice, IComponentRoom
     {
+        /// <summary>
+        /// Indicates if any activity is in use
+        /// </summary>
+        public BoolFeedback InUseFeedback { get; private set; }
+
         public ComponentRoomPropertiesConfig PropertiesConfig { get; private set; }
 
         public List<IActivatableComponent> Components { get; private set; }
         public List<IRoomActivityComponent> Activities { get; private set; }
+
+        //public IRoomRoutingBehaviour RoutingBehaviour { get; private set;}
+        // Decide how this value gets set at runtime....
+        
 
         public ComponentRoom(DeviceConfig config)
             : base(config)
@@ -89,6 +107,8 @@ namespace PepperDash.Essentials.Core.Room
                 BuildComponents();
 
                 BuildActivities();
+
+                SetUpInUseFeedback();
             }
             catch (Exception e)
             {
@@ -97,7 +117,25 @@ namespace PepperDash.Essentials.Core.Room
 
         }
 
+        /// <summary>
+        /// Sets up InUseFeedback
+        /// </summary>
+        private void SetUpInUseFeedback()
+        {
+            InUseFeedback = new BoolFeedback(() => Activities.Any(a => a.InUseFeedback.BoolValue));
 
+            foreach (var activity in Activities)
+            {
+                activity.InUseFeedback.OutputChange += (o, a) =>
+                {
+                    InUseFeedback.FireUpdate();
+                };
+            }
+        }
+
+        /// <summary>
+        /// Builds components
+        /// </summary>
         private void BuildComponents()
         {
             foreach (var compConf in PropertiesConfig.Components)
@@ -118,7 +156,9 @@ namespace PepperDash.Essentials.Core.Room
             }
         }
 
-
+        /// <summary>
+        /// Builds Activities
+        /// </summary>
         private void BuildActivities()
         {
             foreach (var compConf in PropertiesConfig.Activities)

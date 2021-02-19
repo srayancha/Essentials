@@ -225,6 +225,7 @@
     <Compile Include="Gateways\CenRfgwController.cs" />
     <Compile Include="Gateways\EssentialsRfGatewayConfig.cs" />
     <Compile Include="Global\EthernetAdapterInfo.cs" />
+    <Compile Include="Interfaces\Components\IDefaultSourceBehaviour.cs" />
     <Compile Include="Interfaces\Components\RoomComponents.cs" />
     <Compile Include="Interfaces\ILogStrings.cs" />
     <Compile Include="Interfaces\ILogStringsWithLevel.cs" />
@@ -287,6 +288,7 @@
     <Compile Include="Room\Behaviours\RoomOnToDefaultSourceWhenOccupied.cs" />
     <Compile Include="Room\Components\ComponentFactory.cs" />
     <Compile Include="Room\Components\ComponentRoom.cs" />
+    <Compile Include="Room\Components\Habanero\DefaultSourceBehaviour.cs" />
     <Compile Include="Room\Components\RoomComponentBase.cs" />
     <Compile Include="Room\EssentialsRoomBase.cs" />
     <Compile Include="Room\Config\EssentialsRoomScheduledEventsConfig.cs" />
@@ -360,7 +362,8 @@
     <Compile Include="SigHelper.cs" />
     <Compile Include="SmartObjects\SubpageReferencList\SubpageReferenceList.cs" />
     <Compile Include="SmartObjects\SubpageReferencList\SubpageReferenceListItem.cs" />
-    <None Include="app.config" />
+    <None Include="Room\Components\app.config" />
+    <None Include="Room\Components\ComponentRoom.cd" />
     <None Include="Properties\ControlSystem.cfg" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />

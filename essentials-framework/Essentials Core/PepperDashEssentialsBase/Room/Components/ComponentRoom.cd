@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PepperDash.Essentials.Core.Config.DeviceConfig">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAQAABAAAAQAAAAAAAAAAQAAAAACAAA=</HashCode>
+      <FileName>Config\DeviceConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PepperDash.Essentials.Core.Room.Components.ComponentFactoryWrapper">
+    <Position X="4.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAgAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Room\Components\ComponentFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PepperDash.Essentials.Core.Room.Components.ComponentFactory">
+    <Position X="3" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAgAAAAAAAAABAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Room\Components\ComponentFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PepperDash.Essentials.Core.Room.RoomComponentConfig">
+    <Position X="13.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Room\Components\ComponentRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PepperDash.Essentials.Core.Room.RoomActivityConfig">
+    <Position X="11.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAEAAEAAAAAAAAAAAAAAAAAAAAQAAAAAEAAAA=</HashCode>
+      <FileName>Room\Components\ComponentRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PepperDash.Essentials.Core.Room.RoomBehaviourGroupConfig">
+    <Position X="13.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Room\Components\ComponentRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PepperDash.Essentials.Core.Room.RoomDeviceBehaviourConfig">
+    <Position X="15.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Room\Components\ComponentRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PepperDash.Essentials.Core.Room.ComponentRoomPropertiesConfig">
+    <Position X="6.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Room\Components\ComponentRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PepperDash.Essentials.Core.Room.ComponentRoom">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAKAAAgAAAAAAAAAAQAAAABAAAKEgAAA=</HashCode>
+      <FileName>Room\Components\ComponentRoom.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PepperDash.Essentials.Core.Room.RoomBehaviourConfig">
+    <Position X="17.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Room\Components\ComponentRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="PepperDash.Essentials.Core.Interfaces.Components.IComponent">
+    <Position X="5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Components\RoomComponents.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PepperDash.Essentials.Core.Interfaces.Components.IRoomComponent">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Components\RoomComponents.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PepperDash.Essentials.Core.Interfaces.Components.IRoomActivityComponent">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAEAAAAAAAAQAACAAAAAAAAAAAIABAACMAAAA=</HashCode>
+      <FileName>Interfaces\Components\RoomComponents.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PepperDash.Essentials.Core.Interfaces.Components.IActivatableComponent">
+    <Position X="5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAABAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Interfaces\Components\RoomComponents.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PepperDash.Essentials.Core.Interfaces.Components.IRoomBehaviourGroupComponent">
+    <Position X="8.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAgAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Components\RoomComponents.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PepperDash.Essentials.Core.Interfaces.Components.IRoomBehaviourComponent">
+    <Position X="3.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Components\RoomComponents.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PepperDash.Essentials.Core.Interfaces.Components.IDeviceBehaviourComponent&lt;T&gt;">
+    <Position X="5.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Components\RoomComponents.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PepperDash.Essentials.Core.Room.Components.IComponentFactory">
+    <Position X="8.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Room\Components\ComponentFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PepperDash.Essentials.Core.Interfaces.Components.IComponentRoom">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAKAAAAAAAAAAAAAAQAAAAAAAAKAAAAA=</HashCode>
+      <FileName>Interfaces\Components\RoomComponents.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PepperDash.Essentials.Core.Interfaces.Components.IDefaultSourceBehaviour">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Components\IDefaultSourceBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

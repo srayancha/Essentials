@@ -13,6 +13,8 @@ namespace PepperDash.Essentials.Core.Interfaces.Components
     /// </summary>
     public interface IComponentRoom : IKeyed
     {
+        BoolFeedback InUseFeedback { get; }
+
         List<IActivatableComponent> Components { get; }
         List<IRoomActivityComponent> Activities { get; }
 
@@ -45,6 +47,11 @@ namespace PepperDash.Essentials.Core.Interfaces.Components
         /// Indicates if the component is enabled
         /// </summary>
         BoolFeedback IsEnabledFeedback { get; }
+
+        /// <summary>
+        /// Indicates if the activity is in use
+        /// </summary>
+        BoolFeedback InUseFeedback { get; }
 
         /// <summary>
         /// Set this value to enable or disable the component
