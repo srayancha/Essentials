@@ -27,6 +27,10 @@ env:
 jobs:
   Build_Project:
     runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ['csharp']
     steps:
       # First we checkout the source repo
       - name: Checkout repo
@@ -53,7 +57,7 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v1
         with:
-          languages: 'csharp'
+          languages: ${{ matrix.language }}
       # Login to Docker
       - name: Login to Docker
         uses: azure/docker-login@v1
