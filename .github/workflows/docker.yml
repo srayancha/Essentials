@@ -65,6 +65,9 @@ jobs:
         shell: powershell
         run: |
           Invoke-Expression "docker run --rm --mount type=bind,source=""$($Env:GITHUB_WORKSPACE)"",target=""c:/project"" pepperdash/sspbuilder c:\cihelpers\vsidebuild.exe -Solution ""c:\project\$($Env:SOLUTION_FILE).sln"" -BuildSolutionConfiguration $($ENV:BUILD_TYPE)"
+      #Perform CodeQL Analysis
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v1   
       # Zip up the output files as needed
       - name: Zip Build Output
         shell: powershell
@@ -84,8 +87,7 @@ jobs:
         with:
           name: Version
           path: ${{env.GITHUB_HOME}}\output\version.txt
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v1    
+       
   #     - name: Create Release
   #       id: create_release
   #       # using contributor's version to allow for pointing at the right commit
