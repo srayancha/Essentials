@@ -1,0 +1,37 @@
+name: "Branch Build Using Docker"
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  analyze:
+    name: analyze
+    runs-on: windows-latest
+    permissions:
+      security-events: Write
+      actions: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [csharp]
+    
+    container:
+     image: pepperdash/sspbuilder
+     credentials:
+       username: ${{ secrets.DOCKER_USERNAME }}
+       password: ${{ secrets.DOCKER_TOKEN }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: ${{ matrix.language }}
+      - name: Build
+        run: |
+          Invoke-Expression "c:\cihelpers\vsidebuild.exe -Solution .\PepperDashEssentials.sln -BuildSolutionConfiguration $($ENV:BUILD_TYPE)"
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v1
