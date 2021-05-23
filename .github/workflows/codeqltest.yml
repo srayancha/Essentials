@@ -9,7 +9,7 @@ jobs:
     name: analyze
     runs-on: windows-latest
     permissions:
-      security-events: Write
+      security-events: write
       actions: read
 
     strategy:
